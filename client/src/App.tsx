@@ -17,14 +17,17 @@ export const options = {
     title: {
       display: true,
       align: "start",
-      text: "Nye øl brygget pr. måned",
+      text: "Nye øl brygget / måned",
       font: {
         size: 18,
         family: "Raleway",
       },
+      padding: {
+        bottom: 30,
+      },
     },
     legend: {
-      position: "top" as const,
+      display: false,
       labels: {
         // This more specific font property overrides the global property
         font: {
