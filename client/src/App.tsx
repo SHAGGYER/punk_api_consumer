@@ -105,11 +105,11 @@ function App() {
     });
   };
 
-  const getPercentageLastMonth = () => {
+  const getPercentageLastMonth = (): number => {
     const value = monthsParsed[selectedMonth];
     const oldValue =
       selectedMonth - 1 >= 0 ? monthsParsed[selectedMonth - 1] : 0;
-    return getChangeInPercentage(value, oldValue);
+    return parseFloat(getChangeInPercentage(value, oldValue));
   };
 
   const getTotalSinceLastMonth = () => {
