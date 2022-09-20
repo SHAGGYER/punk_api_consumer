@@ -96,7 +96,7 @@ function App() {
       ...graphData,
       datasets: [
         {
-          label: "Amount of brewed beers",
+          label: "Antal bryggede øl",
           data: monthsCount,
           borderColor: "rgb(195, 150, 210)",
           backgroundColor: "rgba(195, 150, 210)",
