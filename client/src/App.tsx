@@ -14,8 +14,24 @@ ChartJS.register(...registerables);
 export const options = {
   responsive: true,
   plugins: {
+    title: {
+      display: true,
+      align: "start",
+      text: "Nye øl brygget pr. måned",
+      font: {
+        size: 18,
+        family: "Raleway",
+      },
+    },
     legend: {
       position: "top" as const,
+      labels: {
+        // This more specific font property overrides the global property
+        font: {
+          size: 14,
+          family: "Raleway",
+        },
+      },
     },
   },
 };
@@ -96,6 +112,7 @@ function App() {
       ...graphData,
       datasets: [
         {
+          tension: 0.6,
           label: "Antal bryggede øl",
           data: monthsCount,
           borderColor: "rgb(195, 150, 210)",
