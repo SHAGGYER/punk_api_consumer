@@ -87,8 +87,8 @@ function App() {
 
     data.forEach((beer) => {
       const split = beer.first_brewed.split("/"); // eg. 01/2012
-      const monthBrewed = parseInt(split[0]);
-      monthsCount[monthBrewed - 1]++;
+      const monthBrewed = parseInt(split[0]); // eg. 01 becomes 1
+      monthsCount[monthBrewed - 1]++; // months start at 0, so 1 becomes 0 (january)
     });
 
     setMonthsParsed(monthsCount);
