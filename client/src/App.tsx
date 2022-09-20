@@ -16,7 +16,7 @@ export const options = {
   plugins: {
     title: {
       display: true,
-      align: "start",
+      align: "start" as const,
       text: "Nye øl brygget / måned",
       font: {
         size: 18,
